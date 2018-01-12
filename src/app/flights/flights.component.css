@@ -1,0 +1,25 @@
+.list-container{
+display: flex;
+}
+.mat-form-field{
+  width: 100%;
+}
+
+.mat-button {
+  border: 1px solid blue;
+  border-radius: 20px;
+  margin-right: 1em;
+  background: #f5f5f5;
+}
+
+.detailpage{
+  display: block;
+  width: 100%;
+  margin-top: 2em;
+  padding: 1em;
+}
+
+.city{
+  font-weight: bolder;
+  font-size: 1.2em;
+}

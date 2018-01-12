@@ -1,0 +1,29 @@
+<h2>
+  Please enter your booking code or ticket number
+</h2>
+
+<div class="container">
+  <mat-form-field>
+    <input [(ngModel)]="filter.name" matInput placeholder="Search destination">
+  </mat-form-field>
+
+  <div class="list-container">
+    <div *ngFor="let place of destinations | slice:0:3 ">
+      <div *ngFor="let subplace of place | objectfilter:'name' | flightfilter:filter ">
+        <button (click)="getDetail(subplace)" mat-button color="primary">
+          <span class="city">{{subplace.city.name}} - </span>
+          {{subplace.name}}</button>
+      </div>
+    </div></div>
+
+  <mat-card class="detailpage" *ngIf="isSelected">
+    <mat-card-title>{{detail.name}}</mat-card-title>
+    <mat-card-content>
+      <p>City: {{detail.city.name}}</p>
+      <p>Code: {{detail.code}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+
